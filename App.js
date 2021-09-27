@@ -16,6 +16,8 @@
 import React from "react"
 import { List, Heading, Box, Center, NativeBaseProvider } from "native-base"
 import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Customcss from './Components/Customcss'
 
 export default App = () => {
   return (
@@ -32,8 +34,17 @@ export default App = () => {
                    </List>
                  </Box>
                  <Button
-                   title="Solid Button"
+                   icon={
+                     <Icon
+                       name="arrow-right"
+                       size={15}
+                       color="white"
+                     />
+                   }
+                   iconRight
+                   title="Button with right icon"
                  />
+                 <Customcss />
             </Center>
           </NativeBaseProvider>
     </>
