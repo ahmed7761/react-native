@@ -22,6 +22,7 @@ import Customcss from './Components/Customcss'
 import ClassState from './Components/ClassState'
 import FunctionState from './Components/FunctionState'
 import FunctionProps from './Components/FunctionProps'
+import ClassProps from './Components/ClassProps'
 
 export default App = () => {
   return (
@@ -54,6 +55,8 @@ export default App = () => {
                  <FunctionState />
                  <Text>--------------------------</Text>
                  <FunctionProps name="ABCD" age="05" city="London" />
+                 <Text>--------------------------</Text>
+                 <ClassProps name="ABCD" age="05" city="London" />
             </Center>
           </NativeBaseProvider>
     </>
