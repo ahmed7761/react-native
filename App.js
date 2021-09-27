@@ -15,6 +15,8 @@
 
 import React from "react"
 import { List, Heading, Box, Center, NativeBaseProvider } from "native-base"
+import { Button } from 'react-native-elements';
+
 export default App = () => {
   return (
     <>
@@ -29,6 +31,9 @@ export default App = () => {
                      <List.Item>Sports</List.Item>
                    </List>
                  </Box>
+                 <Button
+                   title="Solid Button"
+                 />
             </Center>
           </NativeBaseProvider>
     </>
