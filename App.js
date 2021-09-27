@@ -14,11 +14,13 @@
 //export default App;
 
 import React from "react"
+import { View, Text } from "react-native"
 import { List, Heading, Box, Center, NativeBaseProvider } from "native-base"
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Customcss from './Components/Customcss'
 import ClassState from './Components/ClassState'
+import FunctionState from './Components/FunctionState'
 
 export default App = () => {
   return (
@@ -47,6 +49,8 @@ export default App = () => {
                  />
                  <Customcss />
                  <ClassState />
+                 <Text>--------------------------</Text>
+                 <FunctionState />
             </Center>
           </NativeBaseProvider>
     </>
