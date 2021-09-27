@@ -21,6 +21,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Customcss from './Components/Customcss'
 import ClassState from './Components/ClassState'
 import FunctionState from './Components/FunctionState'
+import FunctionProps from './Components/FunctionProps'
 
 export default App = () => {
   return (
@@ -51,6 +52,8 @@ export default App = () => {
                  <ClassState />
                  <Text>--------------------------</Text>
                  <FunctionState />
+                 <Text>--------------------------</Text>
+                 <FunctionProps name="ABCD" age="05" city="London" />
             </Center>
           </NativeBaseProvider>
     </>
