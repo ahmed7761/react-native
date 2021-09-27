@@ -13,16 +13,25 @@
 //
 //export default App;
 
-import React from 'react';
-import {View, Text} from 'react-native';
-
-const App = () => {
-    return (
-            <View>
-                <Text>Hello World</Text>
-            </View>
-           );
+import React from "react"
+import { List, Heading, Box, Center, NativeBaseProvider } from "native-base"
+export default App = () => {
+  return (
+    <>
+      <NativeBaseProvider>
+            <Center flex={1} px="3">
+             <Box w="80%">
+                   <Heading fontSize={24}>Topics (Plain List)</Heading>
+                   <List space={2} my={2}>
+                     <List.Item>Education</List.Item>
+                     <List.Item>Health</List.Item>
+                     <List.Item>Office</List.Item>
+                     <List.Item>Sports</List.Item>
+                   </List>
+                 </Box>
+            </Center>
+          </NativeBaseProvider>
+    </>
+  )
 }
-
-export default App;
 
