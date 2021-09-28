@@ -14,7 +14,7 @@
 //export default App;
 
 import React from "react"
-import { View, Text } from "react-native"
+import { View, Text, ScrollView, Image } from "react-native"
 import { List, Heading, Box, Center, NativeBaseProvider } from "native-base"
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -26,7 +26,7 @@ import ClassProps from './Components/ClassProps'
 
 export default App = () => {
   return (
-    <>
+    <ScrollView >
       <NativeBaseProvider>
             <Center flex={1} px="3">
              <Box w="80%">
@@ -57,9 +57,14 @@ export default App = () => {
                  <FunctionProps name="ABCD" age="05" city="London" />
                  <Text>--------------------------</Text>
                  <ClassProps name="ABCD" age="05" city="London" />
+                 <Text>--------------------------</Text>
+                 <Image source={{uri: 'https://picsum.photos/200'}} style={{width: 400, height: 200}}  />
+                 <Text>--------------------------</Text>
+                 <Image source={require('./Components/assets/images/native.jpg')} style={{width:'100%'}} />
+                 <Text>--------------------------</Text>
             </Center>
           </NativeBaseProvider>
-    </>
+    </ScrollView >
   )
 }
 
