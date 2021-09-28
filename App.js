@@ -64,8 +64,8 @@ export default App = () => {
                  <Text>--------------------------</Text>
                  <Image source={require('./Components/assets/images/native.jpg')} style={{width:'100%'}} />
                  <Text>------------- Flat List -------------</Text>
-                 <CountryList />
             </Center>
+            <CountryList />
           </NativeBaseProvider>
     </ScrollView >
   )

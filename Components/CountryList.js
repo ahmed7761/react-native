@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, Alert, Image } from 'react-native';
 
 class CountryList extends Component {
     myData=[
@@ -15,11 +15,21 @@ class CountryList extends Component {
         {title: 'France', subtitle: 'My Country'},
       ];
 
+
+   onClickItem = (alertTitle) => {
+        Alert.alert(alertTitle)
+   }
+
    ChildView = ({childTitle, childSubtitle}) => {
         return(
-            <View style={{ backgroundColor: 'grey', padding: 10, margin: 5 }}>
-                <Text style={{ color: 'black', fontSize: 18 }}>{childTitle}</Text>
-                <Text style={{ color: 'black', fontSize: 12 }}>{childSubtitle}</Text>
+            <View style={{ flexDirection: 'row', backgroundColor: 'white', margin:5, flex: 100 }}>
+                <View style={{ flex: 30 }}>
+                    <Image source={{uri: 'https://picsum.photos/200'}} style={{width: '100%', height: 70}}  />
+                </View>
+                <View style={{ flex: 70, padding: 10, margin: 5 }} >
+                    <Text style={{ color: 'black', fontSize: 20 }} onPress={this.onClickItem.bind(this, childTitle)}>{childTitle}</Text>
+                    <Text style={{ color: 'black', fontSize: 12 }}>{childSubtitle}</Text>
+                </View>
             </View>
         )
   }
